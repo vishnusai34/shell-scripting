@@ -1,0 +1,9 @@
+total 28
+-rwxr-xr-x. 1 ec2-user ec2-user   89 Oct 22 07:03 samplescript.sh
+-rwxr--r--. 1 ec2-user ec2-user 1413 Oct 22 08:19 variables.sh
+-rwxr--r--. 1 ec2-user ec2-user 2026 Oct 22 10:53 stringoperations
+-rw-r--r--. 1 ec2-user ec2-user   50 Oct 22 12:19 output.log
+-rwxr--r--. 1 ec2-user ec2-user  488 Oct 22 12:20 outputs.sh
+-rw-r--r--. 1 ec2-user ec2-user   32 Oct 22 12:20 file.txt
+-rw-r--r--. 1 ec2-user ec2-user    0 Oct 22 12:20 sucess.log
+-rw-r--r--. 1 ec2-user ec2-user   59 Oct 22 12:20 error.log

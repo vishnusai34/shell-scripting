@@ -1,0 +1,107 @@
+#!/bin/bash
+
+echo "----------------STRING EXECUTABLE COMMANDS-------------------"
+
+# ---------ARRAY funciton -------------------------
+cars=("mercedes" "audi" "kia")
+
+echo "Favorate car: ${cars[0]}"
+
+
+echo "Lsit all the cars: ${cars[@]}"
+
+echo "No of Cars listed: ${#cars[@]}"
+
+
+# ---- READ ONLY variable(realdonly variable once declared cannot be ovberriden it is immutable)--------------
+
+readonly API_URL="https://www.google.com"
+
+echo "url : $API_URL"
+
+# API_URL="https://www.yahoo.com"
+
+# echo "url: $API_URL"
+# unset API_URL    # - Return error if tries to override or delete the variable
+
+
+# --------- Export (setting environment variable in the system)
+export PATH="/usr/local/bin:$PATH"
+
+echo "ENV path set: $PATH"
+
+
+
+
+# String length
+name="Renuka"
+echo "Length of name: ${#name}"
+
+# substring
+text="Welcome Kia"
+echo "length: ${#text}"
+echo ${text:0:7}
+echo ${text:8}
+# echo ${text:11:14}
+
+# Replace 
+echo ${text/Kia/Hyundai}
+
+echo ${text//e/3}
+
+# UpperCase/LowerCase
+echo "UpperCase: ${text^^}"
+echo "LoowerCase: ${text,,}"
+
+# Default Variables
+unset profile
+
+echo "Hello ${profile:-Developer}"
+
+
+echo "Variable set: '${profile}'"
+
+echo "Hello ${profile:=Developer}"
+
+
+echo "variable set after assigning: '${profile}'"
+
+
+# --- READ INPUT(read command give the custom input to enter into the field)
+echo "What is the company name:"
+read name
+echo "Hello Nice to hear about ${name}"
+
+# - Read with prompt
+read -p "what is your age: "  age
+
+echo "Age is: ${age}"
+
+
+read -p "Please enter your mobile number: " mobilenumber
+
+echo "Saved as: ${mobilenumber}"
+
+
+# - Read password/mobilenumer silently
+read -sp "Enter Password: " password
+
+read -sp "Enter mobile number: " mobile number
+
+
+# - Read multiple values
+read -p "Enter first and last: " first last
+echo "logged your name as: $first $last"
+
+# Read inot Array
+read -a colours
+echo "First clour is: ${colours[0]}"
+echo "Second colour is: ${colours[1]}"
+echo "Third Colour is: ${colours[2]}"
+
+
+# Read TimeOut
+read -t 5 -p "Quick Enter something"
+
+echo "TimeExpired"
+
