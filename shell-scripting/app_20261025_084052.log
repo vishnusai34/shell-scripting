@@ -1,0 +1,50 @@
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 193, in add_bill
+    "amount": float(data["amount"]),
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'not_a_number'
+172.17.0.1 - - [25/Oct/2026 07:58:53] "[35m[1mPOST /api/bills HTTP/1.1[0m" 500 -
+157.50.120.228 - - [25/Oct/2026 07:58:59] "GET / HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 07:59:00] "GET /api/bills HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 07:59:03] "GET / HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 07:59:04] "GET /api/bills HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 07:59:06] "GET / HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 07:59:07] "GET /api/bills HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+157.50.120.228 - - [25/Oct/2026 08:01:06] "GET / HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:06] "GET /api/bills HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:11] "GET / HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:11] "GET /api/bills HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:13] "GET / HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:13] "GET /api/bills HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:21] "GET /api/bills HTTP/1.1" 200 -
+157.50.120.228 - - [25/Oct/2026 08:01:22] "GET /api/bills HTTP/1.1" 200 -
+154.16.44.146 - - [25/Oct/2026 08:16:59] "GET / HTTP/1.1" 200 -
+195.206.182.202 - - [25/Oct/2026 08:17:10] "GET / HTTP/1.1" 200 -
+31.14.254.8 - - [25/Oct/2026 08:17:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+185.216.145.175 - - [25/Oct/2026 08:17:11] "GET / HTTP/1.1" 200 -
+213.166.84.39 - - [25/Oct/2026 08:17:11] "[33mGET /mcp/ HTTP/1.1[0m" 404 -
+194.50.235.142 - - [25/Oct/2026 08:17:11] "[33mGET /api/mcp HTTP/1.1[0m" 404 -
+193.32.209.235 - - [25/Oct/2026 08:17:11] "[33mGET /mcp HTTP/1.1[0m" 404 -
+31.14.254.37 - - [25/Oct/2026 08:17:11] "[33mGET /sse HTTP/1.1[0m" 404 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
